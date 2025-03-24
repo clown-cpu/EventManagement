@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+
+    </style>
+    <title>About Page</title>
+</head>
+
+<body class="min-h-screen bg-white font-[Poppins]">
+    <nav class="bg-white p-3">
+        <div class="container mx-auto flex justify-between sm:justify-end items-center">
+            <div class="sm:hidden group relative">
+                <button class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul
+                    class="absolute hidden group-hover:block bg-white shadow-lg rounded-md w-32 text-gray-700 mt-2 space-y-1 z-50">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Login</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <ul class="hidden sm:flex gap-6 list-none pr-5 text-normal">
+                <li><a href="#" class="hover:text-gray-500">Login</a></li>
+                <li>
+                    <a href="register_select.html"
+                        class="bg-sky-900 text-white px-3 py-1 rounded-md hover:bg-sky-800">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <nav class="bg-sky-600 p-3">
+        <div class="container mx-auto flex justify-between items-center px-4">
+
+            <a href="#" class="text-white text-xl font-bold md:gap-2">LOGO</a>
+
+
+            <div class="md:hidden flex items-center space-x-2 flex-1 mx-4">
+                <div class="relative flex-1">
+                    <input type="text" placeholder="Search..."
+                        class="w-full pl-8 pr-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <div class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <button
+                    class="bg-blue-700 hover:bg-blue-800 text-white text-sm px-3 py-1 rounded-md transition duration-300">
+                    Search
+                </button>
+            </div>
+
+
+            <div class="md:hidden group relative">
+                <button class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+
+                <ul
+                    class="absolute hidden group-hover:block bg-sky-600 text-white mt-2 shadow-lg rounded-md w-48 right-0 space-y-1 z-50 p-3">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Home</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Venue</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Events</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">About</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Media</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <ul class="hidden md:flex gap-6 text-white">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">Venue</a></li>
+                <li><a href="#" class="hover:text-gray-300">Events</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#" class="hover:text-gray-300 pr-2">Contact</a></li>
+            </ul>
+
+            <div class="hidden md:flex items-center space-x-2 w-full max-w-xs">
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-44 pl-8 pr-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <div class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <button
+                    class="bg-blue-700 hover:bg-blue-800 text-white text-sm px-3 py-1 rounded-md transition duration-300">
+                    Search
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-8 text-center max-w-4xl mx-auto rounded-sm shadow-sm flex flex-col-reverse sm:flex-row mt-8 gap-6">
+        <div class="text-justify flex-1 ">
+          <p class="text-3xl text-[rgba(38,89,130,1)]">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+          <p class="block pt-2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quo iusto voluptates saepe eaque nam aspernatur ut ipsa nemo, porro placeat?</p>
+          <p class="block pt-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quo iusto voluptates saepe eaque nam aspernatur ut ipsa nemo, porro placeat?</p>
+          <button
+            class="bg-[rgba(103,186,208,1)] hover:bg-blue-500 text-sm mt-4 px-3 py-2 rounded-md transition duration-300">
+            Lorem, ipsum dolor.
+          </button>
+        </div>
+        <div class="sm:w-2/5 w-full pl-10 mb-6 sm:mb-10">
+          <img src="https://s3-alpha-sig.figma.com/img/2f09/ca55/c8817f3278f9bdb6b6bbbea6126396e5?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=jzW6izNra-FZg2bMqDHJ34mT82qSxlIoNTJlkvvrxFIJIRmbFIvna8mjmaVP47eBlPYdBk5hWIo~ROsDi16cfm0Hsox4ucwN7VDbsOU8G4o~DNKZXN6ed1conHTPkex5V15kEf8fdupBHJDP0BdCiw3kzZuTqgAb2AXYkTeExIPnLvC1oEa7s~R3SQ-uVqujYkNW7o-lM8XDEX0h1Qs950qBPuu3z2xFBagrV4RvhQueW-On3eyztGnZgbCKCgars1QjNnMmUXBi0tqxKPCrbWQDg0zZOBgA3P9Xh7~LGSB5VkdE5aGf~-33C01XylTov0YhWrqFGc4yW1ZrEs~CaQ__" 
+               alt="" 
+               class="w-full max-w-xs h-auto rounded-sm">
+        </div>
+      </div>
+      
+    <div class="p-4 text-center max-w-4xl mx-auto rounded-sm shadow-lg mt-10">
+        <div class="text-center text-5xl">Our Unique Features</div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+
+            <div class="flex flex-col items-center">
+
+                <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4"></div>
+
+
+                <h2 class="text-xl  mb-2">Local Cuisine Spotlight</h2>
+
+
+                <p class="text-gray-700">
+                    Discover the best local eateries, from mouthwatering momos to hidden culinary gems.
+                </p>
+            </div>
+
+
+            <div class="flex flex-col items-center">
+
+                <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4"></div>
+
+
+                <h2 class="text-xl  mb-2 whitespace-nowrap">Food Scanning Technology</h2>
+
+
+                <p class="text-gray-700">
+                    Our innovate app ensures price transparency and helps you avoid tourist traps.
+                </p>
+            </div>
+
+
+            <div class="flex flex-col items-center">
+
+                <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4"></div>
+
+
+                <h2 class="text-xl whitespace-nowrap mb-2">Local Cuisine Spotlight</h2>
+
+
+                <p class="text-gray-700">
+                    Break down communication barriers with our Realtime translation feature for local dialects.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-8 bg-blue-50 rounded-xl shadow-lg mt-8">
+        <h2 class="text-3xl md:text-4xl  mb-6 text-center sm:text-left">Why Choose Us?</h2>
+
+        <div class="space-y-4">
+
+            <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="ml-3 text-base md:text-lg">Expert curated travel Packages</p>
+            </div>
+
+
+            <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="ml-3 text-base md:text-lg">Support for local business and communities</p>
+            </div>
+
+
+            <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="ml-3 text-base md:text-lg">Innovative technology for a seamless travel experience</p>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="ml-3 text-base md:text-lg">Free services to make travel accessible for all</p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-[rgba(52,152,219,1)] text-white py-8 mt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+                <p class="text-lg">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tempora!
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Variations</h3>
+                <ul class="space-y-1">
+                    <li>Lorem Ipsum Sits</li>
+                    <li>Lorem Ipsum Is</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Social Media Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li>&#x1F4E7; info@lorem.com</li>
+                    <li>&#x1F4DE;Phone: (123) 456-7890</li>
+                    <li>&#x1F4CD;00000 Lorem Ipsum</li>
+                    <li>Lorem Ipsum, # 01234</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white mt-6 pt-4 text-center text-sm">
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
