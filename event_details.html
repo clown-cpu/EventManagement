@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Event Details</title>
+</head>
+
+<body class="min-h-screen bg-white font-[Poppins]">
+    <nav class="bg-white p-3">
+        <div class="container mx-auto flex justify-between sm:justify-end items-center">
+            <div class="sm:hidden group relative">
+                <button class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul
+                    class="absolute hidden group-hover:block bg-white shadow-lg rounded-md w-32 text-gray-700 mt-2 space-y-1 z-50">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Login</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <ul class="hidden sm:flex gap-6 list-none pr-5 text-normal">
+                <li><a href="#" class="hover:text-gray-500">Login</a></li>
+                <li>
+                    <a href="register_select.html"
+                        class="bg-sky-900 text-white px-3 py-1 rounded-md hover:bg-sky-800">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="bg-sky-600 p-3">
+        <div class="container mx-auto flex justify-between items-center px-4">
+
+            <a href="#" class="text-white text-xl font-bold md:gap-2">LOGO</a>
+
+
+            <div class="md:hidden flex items-center space-x-2 flex-1 mx-4">
+                <div class="relative flex-1">
+                    <input type="text" placeholder="Search..."
+                        class="w-full pl-8 pr-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <div class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <button
+                    class="bg-blue-700 hover:bg-blue-800 text-white text-sm px-3 py-1 rounded-md transition duration-300">
+                    Search
+                </button>
+            </div>
+
+
+            <div class="md:hidden group relative">
+                <button class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+
+                <ul
+                    class="absolute hidden group-hover:block bg-sky-600 text-white mt-2 shadow-lg rounded-md w-48 right-0 space-y-1 z-50 p-3">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Home</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Venue</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Events</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">About</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Media</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-800">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <ul class="hidden md:flex gap-6 text-white">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">Venue</a></li>
+                <li><a href="#" class="hover:text-gray-300">Events</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#" class="hover:text-gray-300 pr-2">Contact</a></li>
+            </ul>
+
+            <div class="hidden md:flex items-center space-x-2 w-full max-w-xs">
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-44 pl-8 pr-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <div class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <button
+                    class="bg-blue-700 hover:bg-blue-800 text-white text-sm px-3 py-1 rounded-md transition duration-300">
+                    Search
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="max-w-6xl mx-auto p-5">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6">
+            <img src="https://s3-alpha-sig.figma.com/img/3ce1/bf40/781347b7f1add770b9851db024ba84f4?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=O3B1cMCYQ0Oj2gsTuHTtSkxUNQRa6tT6pduXwsMyz0w~nX3R1qUlfl7aovIVffr4ls2oq92avfnqu6A~RP4pimO06BrQuUqz1OeW7j47oegU9EXhBIbQMlLpwH6fLD2Q4dTrnXxjlP13lhpUcYKMDmO52Yo40ci7E4Cuo5O0JfT3bH9HUJfwbgYkbfLzjaE9s~XyTduXXixhQYfFIpjY3L5HAm8mfvFWnJhW-bD0LiuSl7D9D-qgnnsWWBah0ztMMmk5nPcLQvxJ~GkT-MPQP3sMDsN9AjDDlt7kM4~DKpIQF8cYGpXz57TURNCKnl~tz4MlGUwGDyONz2PKygKTiA__"
+                alt="Event Image" class="w-full h-40 object-cover">
+            <h1 class="text-3xl font-bold mb-2 pt-4">Beach Meeting With Flower Bath</h1>
+            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi est aperiam dolores?
+                Itaque, cumque vitae?</p>
+            <div class="grid grid-cols-2 grid-flow-col">
+                <div>
+                    <div class="flex space-x-2 pt-4">
+                        <span class="text-2xl font-bold text-blue-500">Rs.1300/-</span>
+
+                    </div>
+                    <p class="text-md font-semibold text-green-600 pb-4 pt-2">Avilable Seats:49</p>
+                </div>
+                <div>
+                    <div class="flex space-x-2 pt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+                        </svg>
+                        <span class="text-gray-600 font-bold text-xl  ">20th July, 2022</span>
+                    </div>
+                    <div class="flex space-x-2 pt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        <span class="text-gray-600 font-bold text-xl">Lakeside, Pokhara</span>
+                    </div>
+                </div>
+            </div>
+
+            <label for="bookingModal"
+                class="mt-5 bg-blue-600 text-white  px-6 py-2 rounded hover:bg-blue-700 cursor-pointer">Book Now</label>
+        </div>
+        <input type="checkbox" id="bookingModal" class="hidden peer">
+        <div
+            class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-opacity duration-300">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                <h2 class="text-xl font-bold mb-4">Book Your Seat</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded mb-2">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-2 border rounded mb-2">
+                    <input type="email" placeholder="Email" class="w-full p-2 border rounded mb-2">
+                    <input type="number" placeholder="Number of Seats" class="w-full p-2 border rounded mb-2">
+                    <button type="submit"
+                        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-900 w-full">Confirm
+                        Booking</button>
+                </form>
+
+                <label for="bookingModal"
+                    class="mt-4 w-full text-center text-red-500 cursor-pointer block">Close</label>
+            </div>
+        </div>
+    </div>
+    <div class="mt-8 ml-10 max-w-6xl">
+        <h2 class="text-3xl pl-8 font-bold">Similar Events</h2>
+        <div class="grid  grid-cols-2 sm:grid-cols-4  gap-4">
+            <div
+                class="w-72  rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white p-2">
+                <a href="event_details.html">
+                    <img src="https://s3-alpha-sig.figma.com/img/3681/351b/d71d0eb5ca0ad97b7aaff9de84fcf7e8?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Vd3lMnwdhGf6nZvXhGC5Tmzn3SdEOt71kdFiVvlAaQaneGBUujKQRsA1D0NjzI7iw5t4qBW3MuSnPfqJ7wXkS7W51scORcLP9iz1OcU3HS6p~K2ggRlyHZyw9ruVSfCoyRRCzz0ALCvi-FBG7Ghk3GXzAj7wnfI0igSmRZSnZzTd5zan4506JipPabaBfAJ1y3gd6UDszUay6jIBb2qiqx2Ytp1Y41Jf0WnpoXqoEa~xJbUxt0i1PddHzp2MH-fbx3Nr3yAHD7ci5wU7w2QMTTxtRb0Zcf9OdjwQLnFN-YiScrC44TYhZHRDp0lrenZ-eNfdZKXNgfnimwY9OheOdA__"
+                        alt="Event Image" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold mb-2">Bentely Product ShowCase</h2>
+                        <div class="flex justify-between items-center mb-3">
+                            <div>
+                                <div class="flex items-center text-sm text-gray-600 mb-1">
+                                    <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2h-2M5 21V10a2 2 0 012-2h10a2 2 0 012 2v11m-10-5h8m-8 0h8m-8 3h8m-8 3h8">
+                                        </path>
+                                    </svg>
+                                    <span>1st Nov, 2025</span>
+                                </div>
+                                <span
+                                    class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full">
+                                    Seats: 39</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-sm font-medium text-gray-800">Rs. 1,300/-</div>
+                                <div class="text-sm text-gray-500">Lakeside,Pokhara</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="w-72  rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white p-2">
+                <a href="event_details.html">
+                    <img src="https://s3-alpha-sig.figma.com/img/424b/6e45/07ae1fea6d88b1aaa065995206d96222?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=D97sTOA107Nrufp1tmT5mi5iQ53YKG9vGRjaPy7sKpPxvyZzgG6swoWEeKARexyebCiZl~8JRna7TTq2SL-z0PvL70abEZH9M0qlyrC5fCjt86kBagoV1cxvgDtD~J2GW-hG7CtGXqhrkFCLADDT-I2cGpZI3vewve-mK9U0MIWtpZDl2adkV9yn~-m~xXKk8cJybTyAFKhxYP1C48xyGI1Ld0CdZYT0~ILIjcySsF1Y8g6ccWIV3RQaKvHeJs0Zu2t6AyG0Y~YdCs1zeqCeTrNuqCiNVHOHXC7WQKXxLgLd7hyeJpxDhTcyZ4Mp9bRJPn9KyyBohWL5eetUOI5JEA__"
+                        alt="Event Image" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold mb-2">Annual General Conference</h2>
+                        <div class="flex justify-between items-center mb-3">
+                            <div>
+                                <div class="flex items-center text-sm text-gray-600 mb-1">
+                                    <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2h-2M5 21V10a2 2 0 012-2h10a2 2 0 012 2v11m-10-5h8m-8 0h8m-8 3h8m-8 3h8">
+                                        </path>
+                                    </svg>
+                                    <span>10th Oct, 2025</span>
+                                </div>
+                                <span
+                                    class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full">
+                                    Seats: 49</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-sm font-medium text-gray-800">Rs. 1,300/-</div>
+                                <div class="text-sm text-gray-500">Lakeside,Pokhara</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                class="w-72  rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white p-2">
+                <a href="event_details.html">
+                    <img src="https://s3-alpha-sig.figma.com/img/3ce1/bf40/781347b7f1add770b9851db024ba84f4?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=O3B1cMCYQ0Oj2gsTuHTtSkxUNQRa6tT6pduXwsMyz0w~nX3R1qUlfl7aovIVffr4ls2oq92avfnqu6A~RP4pimO06BrQuUqz1OeW7j47oegU9EXhBIbQMlLpwH6fLD2Q4dTrnXxjlP13lhpUcYKMDmO52Yo40ci7E4Cuo5O0JfT3bH9HUJfwbgYkbfLzjaE9s~XyTduXXixhQYfFIpjY3L5HAm8mfvFWnJhW-bD0LiuSl7D9D-qgnnsWWBah0ztMMmk5nPcLQvxJ~GkT-MPQP3sMDsN9AjDDlt7kM4~DKpIQF8cYGpXz57TURNCKnl~tz4MlGUwGDyONz2PKygKTiA__"
+                        alt="Event Image" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold mb-2">Motivational Speech Event</h2>
+                        <div class="flex justify-between items-center mb-3">
+                            <div>
+                                <div class="flex items-center text-sm text-gray-600 mb-1">
+                                    <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2h-2M5 21V10a2 2 0 012-2h10a2 2 0 012 2v11m-10-5h8m-8 0h8m-8 3h8m-8 3h8">
+                                        </path>
+                                    </svg>
+                                    <span>8th Oct, 2025</span>
+                                </div>
+                                <span
+                                    class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full">
+                                    Seats: 199</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-sm font-medium text-gray-800">Rs. 1,800/-</div>
+                                <div class="text-sm text-gray-500">Lakeside,Pokhara</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="w-72  rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white p-2">
+                <a href="event_details.html">
+                    <img src="https://s3-alpha-sig.figma.com/img/3681/351b/d71d0eb5ca0ad97b7aaff9de84fcf7e8?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Vd3lMnwdhGf6nZvXhGC5Tmzn3SdEOt71kdFiVvlAaQaneGBUujKQRsA1D0NjzI7iw5t4qBW3MuSnPfqJ7wXkS7W51scORcLP9iz1OcU3HS6p~K2ggRlyHZyw9ruVSfCoyRRCzz0ALCvi-FBG7Ghk3GXzAj7wnfI0igSmRZSnZzTd5zan4506JipPabaBfAJ1y3gd6UDszUay6jIBb2qiqx2Ytp1Y41Jf0WnpoXqoEa~xJbUxt0i1PddHzp2MH-fbx3Nr3yAHD7ci5wU7w2QMTTxtRb0Zcf9OdjwQLnFN-YiScrC44TYhZHRDp0lrenZ-eNfdZKXNgfnimwY9OheOdA__"
+                        alt="Event Image" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold mb-2">Bentely Product ShowCase</h2>
+                        <div class="flex justify-between items-center mb-3">
+                            <div>
+                                <div class="flex items-center text-sm text-gray-600 mb-1">
+                                    <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2h-2M5 21V10a2 2 0 012-2h10a2 2 0 012 2v11m-10-5h8m-8 0h8m-8 3h8m-8 3h8">
+                                        </path>
+                                    </svg>
+                                    <span>1st Nov, 2025</span>
+                                </div>
+                                <span
+                                    class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full">
+                                    Seats: 39</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-sm font-medium text-gray-800">Rs. 1,300/-</div>
+                                <div class="text-sm text-gray-500">Lakeside,Pokhara</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[rgba(52,152,219,1)] text-white py-8 mt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+                <p class="text-lg">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tempora!
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Variations</h3>
+                <ul class="space-y-1">
+                    <li>Lorem Ipsum Sits</li>
+                    <li>Lorem Ipsum Is</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Social Media Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li><i class="fa-solid fa-envelope"></i> info@lorem.com</li>
+                    <li><i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 00000 Lorem Ipsum</li>
+                    <li>Lorem Ipsum, # 01234</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white mt-6 pt-4 text-center text-sm">
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        </div>
+    </footer>
+
+</body>
+
+</html>
