@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Event Dashboard</title>
+
+</head>
+<body class="bg-[rgba(214,234,248,1)] font-[Poppins]">
+    <!-- Checkbox Hack for Mobile Menu -->
+    <nav class="bg-sky-600 p-3 w-full fixed top-0 left-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-white text-xl font-bold">LOGO</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="mobile-navbar-toggle" class="hidden peer/navbar">
+            <label for="mobile-navbar-toggle" class="md:hidden text-white cursor-pointer">
+                <i class="fas fa-bars text-2xl"></i>
+            </label>
+
+            <!-- Mobile Navbar Dropdown -->
+            <div class="fixed inset-0 bg-black/50 hidden peer-checked/navbar:block md:hidden z-40">
+                <div class="bg-sky-600 w-64 h-full fixed top-0 right-0 transform transition-transform duration-300 ease-in-out">
+                    <div class="p-4 flex justify-between items-center border-b border-sky-500">
+                        <span class="text-white text-xl font-bold">Menu</span>
+                        <label for="mobile-navbar-toggle" class="text-white cursor-pointer">
+                            <i class="fas fa-times text-2xl"></i>
+                        </label>
+                    </div>
+                    <ul class="text-white">
+                        <li><a href="index.html" class="block p-4 hover:bg-sky-700">Home</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Venue</a></li>
+                        <li><a href="events.html" class="block p-4 hover:bg-sky-700">Events</a></li>
+                        <li><a href="about.html" class="block p-4 hover:bg-sky-700">About</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Media</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Contact</a></li>
+                        <li>
+                            <button class="w-full bg-gray-900 text-white px-4 py-2">
+                                Logout
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-6 text-white">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">Venue</a></li>
+                <li><a href="events.html" class="hover:text-gray-300">Events</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+
+            <button class="hidden md:block bg-gray-900 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-300">
+                Logout
+            </button>
+        </div>
+    </nav>
+   
+    <div class="flex pt-16">'
+         <!-- Sidebar Toggle and Sidebar -->
+         <input type="checkbox" id="mobile-sidebar-toggle" class="hidden peer/sidebar">
+         <label for="mobile-sidebar-toggle" class="md:hidden fixed top-16 left-4 z-50 text-sky-600 cursor-pointer">
+             <i class="fas fa-bars text-2xl"></i>
+         </label>
+ 
+         <div class="fixed inset-y-10 left-0 w-64 bg-[rgba(214,234,248,1)] shadow-md 
+             transform -translate-x-full 
+             md:translate-x-0 
+             peer-checked/sidebar:translate-x-0 
+             transition-transform duration-300 ease-in-out z-40 md:static h-full min-h-screen">
+             <div class="p-5 border-b">
+                 <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-100 mb-3 ml-8 bg-gray-900">
+                     <img src="" alt="" class="w-full h-full object-cover">
+                 </div>
+                 
+                 <a href="dashboard.html"><p class="text-3xl font-bold text-gray-900 mb-3 ml-2">Dashboard</p></a>
+             </div>
+             <nav class="mt-10">
+                 <a href="d_events.html" class="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+                     <i class="fas fa-calendar mr-3"></i>
+                     Event
+                 </a>
+                 <a href="d_venues.html" class="flex items-center p-4 hover:bg-gray-100 cursor-pointer border-t-2 border-white">
+                     <i class="fas fa-map-marker-alt mr-3"></i>
+                     Venues
+                 </a>
+                 <a href="d_bookings.html" class="flex items-center p-4 hover:bg-gray-100 cursor-pointer border-t-2 border-white">
+                     <i class="fas fa-ticket-alt mr-3"></i>
+                     Bookings
+                 </a>
+             </nav>
+         </div>
+ 
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 pt-10 sm:ml-0 sm:pl-6 max-w-full relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="p-6">
+                        <i class="fas fa-calendar text-4xl text-sky-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Total Events</h3>
+                        <p class="text-gray-600">3 Events</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="p-6">
+                        <i class="fas fa-map-marker-alt text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Total Venues</h3>
+                        <p class="text-gray-600">3 Venues</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="p-6">
+                        <i class="fas fa-ticket-alt text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Total Bookings</h3>
+                        <p class="text-gray-600">3 Bookings</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="p-6">
+                        <i class="fas fa-users text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Total Attendees</h3>
+                        <p class="text-gray-600">150 People</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-[rgba(52,152,219,1)] text-white py-8 mt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+                <p class="text-lg">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tempora!
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Variations</h3>
+                <ul class="space-y-1">
+                    <li>Lorem Ipsum Sits</li>
+                    <li>Lorem Ipsum Is</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Social Media Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li><i class="fa-solid fa-envelope"></i> info@lorem.com</li>
+                    <li><i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 00000 Lorem Ipsum</li>
+                    <li>Lorem Ipsum, # 01234</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white mt-6 pt-4 text-center text-sm">
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        </div>
+    </footer>
+</body>
+</html>

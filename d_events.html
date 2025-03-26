@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Events Dashboard</title>
+</head>
+
+<body class="bg-[rgba(214,234,248,1)] font-[Poppins] min-h-screen flex flex-col">
+    <!-- Mobile-friendly Navbar -->
+    <nav class="bg-sky-600 p-3 w-full fixed top-0 left-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-white text-xl font-bold">LOGO</a>
+
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="mobile-navbar-toggle" class="hidden peer/navbar">
+            <label for="mobile-navbar-toggle" class="md:hidden text-white cursor-pointer">
+                <i class="fas fa-bars text-2xl"></i>
+            </label>
+
+            <!-- Mobile Navbar Dropdown -->
+            <div class="fixed inset-0 bg-black/50 hidden peer-checked/navbar:block md:hidden z-40">
+                <div
+                    class="bg-sky-600 w-64 h-full fixed top-0 right-0 transform transition-transform duration-300 ease-in-out">
+                    <div class="p-4 flex justify-between items-center border-b border-sky-500">
+                        <span class="text-white text-xl font-bold">Menu</span>
+                        <label for="mobile-navbar-toggle" class="text-white cursor-pointer">
+                            <i class="fas fa-times text-2xl"></i>
+                        </label>
+                    </div>
+                    <ul class="text-white">
+                        <li><a href="index.html" class="block p-4 hover:bg-sky-700">Home</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Venue</a></li>
+                        <li><a href="events.html" class="block p-4 hover:bg-sky-700">Events</a></li>
+                        <li><a href="about.html" class="block p-4 hover:bg-sky-700">About</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Media</a></li>
+                        <li><a href="#" class="block p-4 hover:bg-sky-700">Contact</a></li>
+                        <li>
+                            <button class="w-full bg-gray-900 text-white px-4 py-2">
+                                Logout
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-6 text-white">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">Venue</a></li>
+                <li><a href="events.html" class="hover:text-gray-300">Events</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+
+            <button
+                class="hidden md:block bg-gray-900 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-300">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar Toggle and Sidebar -->
+        <input type="checkbox" id="mobile-sidebar-toggle" class="hidden peer/sidebar">
+        <label for="mobile-sidebar-toggle" class="md:hidden fixed top-16 left-4 z-50 text-sky-600 cursor-pointer">
+            <i class="fas fa-bars text-2xl"></i>
+        </label>
+
+        <div class="fixed inset-y-10 left-0 w-64 bg-[rgba(214,234,248,1)] shadow-md 
+            transform -translate-x-full 
+            md:translate-x-0 
+            peer-checked/sidebar:translate-x-0 
+            transition-transform duration-300 ease-in-out z-40 md:static h-full min-h-screen">
+            <div class="p-5 border-b">
+                <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-100 mb-3 ml-8 bg-gray-900">
+                    <img src="" alt="" class="w-full h-full object-cover">
+                </div>
+
+            <a href="dashboard.html"><p class="text-3xl font-bold text-gray-900 mb-3 ml-2">Dashboard</p></a>
+            </div>
+            <nav class="mt-10">
+                <a href="d_events.html" class="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+                    <i class="fas fa-calendar mr-3"></i>
+                    Event
+                </a>
+                <a href="d_venues.html"
+                    class="flex items-center p-4 hover:bg-gray-100 cursor-pointer border-t-2 border-white">
+                    <i class="fas fa-map-marker-alt mr-3"></i>
+                    Venues
+                </a>
+                <a href="d_bookings.html"
+                    class="flex items-center p-4 hover:bg-gray-100 cursor-pointer border-t-2 border-white">
+                    <i class="fas fa-ticket-alt mr-3"></i>
+                    Bookings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-4  sm:ml-4 sm:mr-5">
+            <div id="events-content">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Events</h1>
+                    <label for="add-event-modal"
+                        class="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700 cursor-pointer">
+                        Add Event
+                    </label>
+                </div>
+
+                <!-- Add Event Modal -->
+                <input type="checkbox" id="add-event-modal" class="hidden peer/add-event">
+                <div
+                    class="fixed inset-0 z-50 hidden peer-checked/add-event:flex items-center justify-center bg-black bg-opacity-50">
+                    <div class="bg-white p-6 rounded-lg w-96 max-w-full">
+                        <h2 class="text-2xl font-bold mb-4">Add Event</h2>
+                        <form>
+                            <input type="text" placeholder="Event Name" class="w-full p-2 border rounded mb-4">
+                            <input type="text" placeholder="Description" class="w-full p-2 border rounded mb-4">
+                            <input type="text" placeholder="Venue" class="w-full p-2 border rounded mb-4">
+                            <input type="date" class="w-full p-2 border rounded mb-4">
+                            <div class="flex justify-end space-x-4">
+                                <label for="add-event-modal"
+                                    class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Events Table -->
+                <div class="overflow-x-auto w-full">
+                    <table class="w-full bg-white shadow-md rounded">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="p-3 text-left">Event Name</th>
+                                <th class="p-3 text-left hidden sm:table-cell">Description</th>
+                                <th class="p-3 text-left hidden sm:table-cell">Venue</th>
+                                <th class="p-3 text-left">Date</th>
+                                <th class="p-3 text-left">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-3">Beach Meeting With Flower Bath</td>
+                                <td class="p-3 hidden sm:table-cell">Annual beach team gathering</td>
+                                <td class="p-3 hidden sm:table-cell">Hotel XYZ</td>
+                                <td class="p-3">3rd Oct, 2025</td>
+                                <td class="p-3">
+                                    <label for="edit-event-modal" class="text-blue-600 mr-3 cursor-pointer">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </label>
+
+                                    <!-- Edit Event Modal -->
+                                    <input type="checkbox" id="edit-event-modal" class="hidden peer/edit-event">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/edit-event:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full">
+                                            <h2 class="text-2xl font-bold mb-4">Edit Event</h2>
+                                            <form>
+                                                <input type="text" placeholder="Event Name"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Description"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Venue"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="date" class="w-full p-2 border rounded mb-4">
+                                                <div class="flex justify-end space-x-4">
+                                                    <label for="edit-event-modal"
+                                                        class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                    <button type="submit"
+                                                        class="bg-blue-600 text-white px-4 py-2 rounded">Update</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <label for="delete-modal" class="text-red-600 cursor-pointer">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </label>
+
+                                    <!-- Delete Modal -->
+                                    <input type="checkbox" id="delete-modal" class="hidden peer/delete">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/delete:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full text-center">
+                                            <h2 class="text-2xl font-bold mb-4">Are You Sure?</h2>
+                                            <p class="mb-6">Do you really want to delete this item?</p>
+                                            <div class="flex justify-center space-x-4">
+                                                <label for="delete-modal"
+                                                    class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">Beach Meeting With Flower Bath</td>
+                                <td class="p-3 hidden sm:table-cell">Annual beach team gathering</td>
+                                <td class="p-3 hidden sm:table-cell">Hotel XYZ</td>
+                                <td class="p-3">3rd Oct, 2025</td>
+                                <td class="p-3">
+                                    <label for="edit-event-modal" class="text-blue-600 mr-3 cursor-pointer">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </label>
+
+                                    <!-- Edit Event Modal -->
+                                    <input type="checkbox" id="edit-event-modal" class="hidden peer/edit-event">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/edit-event:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full">
+                                            <h2 class="text-2xl font-bold mb-4">Edit Event</h2>
+                                            <form>
+                                                <input type="text" placeholder="Event Name"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Description"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Venue"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="date" class="w-full p-2 border rounded mb-4">
+                                                <div class="flex justify-end space-x-4">
+                                                    <label for="edit-event-modal"
+                                                        class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                    <button type="submit"
+                                                        class="bg-blue-600 text-white px-4 py-2 rounded">Update</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <label for="delete-modal" class="text-red-600 cursor-pointer">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </label>
+
+                                    <!-- Delete Modal -->
+                                    <input type="checkbox" id="delete-modal" class="hidden peer/delete">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/delete:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full text-center">
+                                            <h2 class="text-2xl font-bold mb-4">Are You Sure?</h2>
+                                            <p class="mb-6">Do you really want to delete this item?</p>
+                                            <div class="flex justify-center space-x-4">
+                                                <label for="delete-modal"
+                                                    class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">Beach Meeting With Flower Bath</td>
+                                <td class="p-3 hidden sm:table-cell">Annual beach team gathering</td>
+                                <td class="p-3 hidden sm:table-cell">Hotel XYZ</td>
+                                <td class="p-3">3rd Oct, 2025</td>
+                                <td class="p-3">
+                                    <label for="edit-event-modal" class="text-blue-600 mr-3 cursor-pointer">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </label>
+
+                                    <!-- Edit Event Modal -->
+                                    <input type="checkbox" id="edit-event-modal" class="hidden peer/edit-event">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/edit-event:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full">
+                                            <h2 class="text-2xl font-bold mb-4">Edit Event</h2>
+                                            <form>
+                                                <input type="text" placeholder="Event Name"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Description"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="text" placeholder="Venue"
+                                                    class="w-full p-2 border rounded mb-4">
+                                                <input type="date" class="w-full p-2 border rounded mb-4">
+                                                <div class="flex justify-end space-x-4">
+                                                    <label for="edit-event-modal"
+                                                        class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                    <button type="submit"
+                                                        class="bg-blue-600 text-white px-4 py-2 rounded">Update</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <label for="delete-modal" class="text-red-600 cursor-pointer">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </label>
+
+                                    <!-- Delete Modal -->
+                                    <input type="checkbox" id="delete-modal" class="hidden peer/delete">
+                                    <div
+                                        class="fixed inset-0 z-50 hidden peer-checked/delete:flex items-center justify-center bg-black bg-opacity-50">
+                                        <div class="bg-white p-6 rounded-lg w-96 max-w-full text-center">
+                                            <h2 class="text-2xl font-bold mb-4">Are You Sure?</h2>
+                                            <p class="mb-6">Do you really want to delete this item?</p>
+                                            <div class="flex justify-center space-x-4">
+                                                <label for="delete-modal"
+                                                    class="bg-gray-200 px-4 py-2 rounded cursor-pointer">Cancel</label>
+                                                <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[rgba(52,152,219,1)] text-white py-8 mt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+                <p class="text-lg">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tempora!
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Variations</h3>
+                <ul class="space-y-1">
+                    <li>Lorem Ipsum Sits</li>
+                    <li>Lorem Ipsum Is</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Social Media Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="font-bold uppercase mb-2 ">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li><i class="fa-solid fa-envelope"></i> info@lorem.com</li>
+                    <li><i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 00000 Lorem Ipsum</li>
+                    <li>Lorem Ipsum, # 01234</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white mt-6 pt-4 text-center text-sm">
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        </div>
+    </footer>
+</body>
+
+</html>
